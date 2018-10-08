@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inline editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+	
+	<div class="container">
+		<div class="search">
+			<input type="text" v-model="search"  placeholder="Search item...">
+		</div>
+		<ul class="item">
+			<li v-for="(data, index) in dataProsessed" 
+			:class="{'active':data.active}" 
+			@click="data.active = !data.active">
+				{{data.name}}
+				<div class="order">
+					<input type="checkbox" :id="['check-'+index]" :checked="data.checked">
+					<label :for="['check-'+index]" @click.stop="data.checked = !data.checked"></label>
+				</div>
+				<p>{{data.price | harga}}</p>
+			</li>
+		</ul>
+		<h2 class="total">Total ordered <span class="price">{{total | harga}}</span></h2>
+	</div>
+
+</div>
+
+<script src="../_asset/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

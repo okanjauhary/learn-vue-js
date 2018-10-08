@@ -1,0 +1,56 @@
+*{
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+h1{
+	font-size: 3rem;
+	font-weight: 100;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: inline-block;
+	padding: 10px;
+}
+
+.tooltip{
+	position: relative;
+	background: whitesmoke;
+	border: 1px dashed  #ccc;
+	display: inline-block;
+	padding: 20px;
+	border-radius: 15px;
+}
+
+.tooltip .close{
+	background: none;
+	border: none;
+	position: absolute;
+	top: 0;
+	right: .5em;
+	font-size: 1.5rem;
+	font-weight: 100;
+	color: #888
+}
+.tooltip .close:hover{
+	cursor: pointer;
+	color: #555;
+}
+
+.tooltip input{
+	border: none;
+	border-bottom: 1px dashed #aaa;
+	background: none;
+	font-size: 1.7rem;
+	color: #555;
+}
+
+.tooltip input:focus{
+	border-bottom-color: #888;
+	border-bottom-style: solid;
+	transition: All .3s;
+}

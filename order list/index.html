@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inline editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+	
+	<div class="container">
+		<h1>Order List</h1>
+		<ul class="list">
+			<li 
+			v-for="data in barang" 
+			:class="{'active':data.active}"
+			@click="data.active = !data.active">
+				{{data.name}} <span class="price">{{data.price | harga}}</span>
+			</li>
+		</ul>
+		<h2 class="total">Total ordered <span class="price">{{total | harga}}</span></h2>
+	</div>
+
+</div>
+
+<script src="../_asset/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

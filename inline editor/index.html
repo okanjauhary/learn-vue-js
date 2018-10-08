@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inline editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+	
+<div class="tooltip" v-show="buble">
+	<button class="close" @click="buble=false">&otimes;</button>
+	<input type="text" :value="content" v-model="content">
+</div>
+
+<h1 @click="buble=!buble">{{content}}</h1>
+
+</div>
+
+<script src="../_asset/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

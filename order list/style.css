@@ -1,0 +1,52 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	outline: none;
+}
+
+.container{
+	margin: 20px auto;
+	width: 50%;
+	background: whitesmoke;
+	border: 1px dashed  #ccc;
+	border-radius: 5px;
+}
+
+h1{
+	font-weight: 100;
+	text-align: center;
+	width: 100%;
+	padding: 20px;
+	border-bottom: 1px dashed  #ccc;
+}
+
+.list{
+	list-style: none;
+	display: block;
+	padding: 20px;
+}
+
+.list li{
+	font-size: 1.5rem;
+	padding: 10px;
+	cursor: pointer;
+}
+.list li.active,
+.list li.active .price{
+	text-decoration: line-through;
+	/*font-weight: bold;*/
+	color: #39AF52;
+}
+
+
+.price{
+	float: right;
+}
+
+.total{
+	padding: 20px;
+	margin-top: 10px;
+	border-top: 1px dashed  #ccc;
+}

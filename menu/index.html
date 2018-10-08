@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Navigator Menu</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+	
+	<ul class="menu">
+		<li><a 
+			href="#" 
+			@click.prevent="view='home'" 
+			:class="[view == 'home'? 'active':'']">
+		Home
+		</a></li>
+		<li><a 
+			href="#" 
+			@click.prevent="view='about'" 
+			:class="{'active': view === 'about'}">
+		About
+		</a></li>
+		<li><a 
+			href="#" 
+			@click.prevent="view='contact'" 
+			:class="[view == 'contact'? 'active':'']">
+		Contact
+		</a></li>
+		<li><a 
+			href="#" 
+			@click.prevent="view='member'" 
+			:class="[view == 'member'? 'active':'']">
+		Member
+		</a></li>
+	</ul>
+
+	<component :is="view" :members="members" keep-alive></component>
+
+
+</div>
+
+<template id="home-view">
+	<div class="content">
+		<h1>Ini halaman home</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque deleniti quam velit obcaecati sed autem, est provident esse eum tenetur?</p>
+	</div>
+</template>
+
+<template id="about-view">
+	<div class="content">
+		<h1>About Us</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat iure ducimus tempora, voluptas quisquam, nulla. Similique cupiditate quisquam odio enim nostrum aliquam cumque sint voluptatibus aspernatur tempore obcaecati, fuga molestias.</p>
+	</div>
+</template>
+
+<template id="member-view" >
+	<div class="content">
+		<h1>Daftar Member</h1>
+		<ul>
+			<li v-for="data in members">{{data.nama}}</li>
+		</ul>
+	</div>
+</template>
+
+
+<script src="../_asset/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

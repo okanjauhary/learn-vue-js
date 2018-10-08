@@ -1,0 +1,114 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	outline: none;
+}
+
+.container{
+	margin: 20px auto;
+	width: 50%;
+	background: whitesmoke;
+	border: 1px dashed  #ccc;
+	border-radius: 5px;
+}
+
+.search{
+	padding: 25px;
+	width: 100%;
+	border-bottom: 1px dashed  #ccc;
+}
+
+.search input{
+	text-align: center;
+	width: 100%;
+	font-size: 2.3rem;
+	border: none;
+	background: none;
+}
+
+.item{
+	list-style: none;
+	margin: 0;
+	margin-bottom: 20px;
+	height: 400px;
+	overflow-y: scroll;
+}
+
+.item li{
+	position: relative;
+	padding: 10px 30px;
+	font-size: 2rem;
+	cursor: pointer;
+}
+.item li:hover{
+	background: #EAEAEA;
+	transition: All .3s ease-in-out;
+}
+
+.item li.active{
+	background: #EAEAEA;
+}
+
+.item li.active p{
+	height: 30px;
+	transition: All .3s ease-in-out;
+}
+
+.item li p{
+	margin-top: 10px;
+	height: 0px;
+	overflow: hidden;
+	font-size: 1.4rem;
+	color: #555;
+	transition: height .3s ease-in;
+}
+
+.order{
+	display: inline-block;
+	float: right;
+}
+
+.order label{
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	border: 2px solid grey;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.order input[type=checkbox]{
+	display: none;
+}
+
+.order input[type=checkbox]:checked + label{
+	border-color: #2A9827;
+	border-width: 4px;
+}
+
+.total{
+	padding: 20px;
+	margin-top: 10px;
+	border-top: 1px dashed  #ccc;
+}
+
+.price{
+	float: right;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+	border-radius: 30px;
+    background: #aaa;    
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 30px
+}

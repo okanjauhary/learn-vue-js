@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar Vue js by weework</title>
+	<style>
+		html, body{
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+		#app{
+			display: block;
+			width: 100%;
+			height: 600px;
+			background-color: lightblue;
+			position: absolute;
+			z-index: 1;
+		}
+		#app:after{
+			content: 'Move your mouse!';
+			font-size: 3rem;
+			color: #7CAFBF;
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			   -moz-transform: translate(-50%, -50%);
+			    -ms-transform: translate(-50%, -50%);
+			     -o-transform: translate(-50%, -50%);
+			        transform: translate(-50%, -50%);
+		}
+		.buble{
+			display: inline-block;
+			background-color: #fff;
+			padding: 10px;
+			border-radius: 5px;
+			opacity: .8;
+			z-index: 999;
+			position: absolute;
+		}
+		.buble span{
+			margin-right: 10px;
+			color: #444;
+		}
+		.red{
+			color: red
+		}
+		.blue{
+			color: blue
+		}
+	</style>
+</head>
+<body>
+
+<div id="app" @mousemove="pointer">
+	<div class="buble" :style="trans">
+		<span>x: {{ posX }}</span>
+		<span>y: {{ posY }}</span>
+	</div>	
+</div>
+
+<script src="_asset/vue.js"></script>
+<script src="_asset/buble.js"></script>
+</body>
+</html>
